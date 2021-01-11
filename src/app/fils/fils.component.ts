@@ -7,10 +7,16 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 })
 export class FilsComponent implements OnInit {
 @Input() color= " ";
+ myFavoriteColor="red";
+ @Output() SendChildColor = new EventEmitter;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sendChildColortoFather(){
+    this.SendChildColor.emit(this.myFavoriteColor);
   }
 
 }

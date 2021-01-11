@@ -12,5 +12,7 @@ color="green"
 
   ngOnInit(): void {
   }
-
+  displaySonColor(event: string){
+    this.color= event;
+  }
 }
